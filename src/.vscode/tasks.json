@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    // 可写多个任务，用{}框住，其中label是任务名，command是指令名，type是指令类型
+    "tasks": 
+    [
+        {
+            "label": "make",		
+            "command": "make",	//使用make，在preLaunchTask中调用
+            "group": {			//未知用处
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "delete",		//windows下删除指令，在postDebugTask中
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "*.o"
+            ]
+        }
+    ],
+
+}

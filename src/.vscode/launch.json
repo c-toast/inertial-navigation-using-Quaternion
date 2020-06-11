@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++Launch(GDB)",   //配置名称
+            "type": "cppdbg",           //配置类型
+            "request": "launch",        //请求配置类型
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+            "args": [],                 //传递参数，为空即可
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",    //current working directory
+            "environment": [],
+            "externalConsole": true,        //是否显示控制台
+            "MIMode": "gdb",
+            "preLaunchTask": "make",
+            //"postDebugTask": "delete",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
