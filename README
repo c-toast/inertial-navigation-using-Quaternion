@@ -1,2 +1,2 @@
 To simplify the problems, I uses First order Runge-Kutta to solve Quaternion differential equations and calculate the velocity, position. The result is not good because of the accumulative errors of imu. It can be modified by fusing imu with other sensor.
-Notice that the definition of the rotation order of euler angle in this project may be different from the definitions in other projects, so some formulas is different. Besides, the code in serialport should be rewrite according to the imu serial port protocol
+Notice that the definition of the rotation order of euler angle in this project may be different from the definitions in other projects, so some formulas is different. Besides, the code in serialport.cpp should be rewritten according to the serial port protocol.
